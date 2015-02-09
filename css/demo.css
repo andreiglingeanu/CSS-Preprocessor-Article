@@ -1,0 +1,52 @@
+#main figure {
+  position: relative;
+}
+
+#main figure img {
+  width: 100%;
+  transition: all .2s linear;
+}
+
+#main figure,
+#main figure img {
+  border-radius: 50%;
+}
+
+#main figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+
+  padding-top: 20px;
+
+  border-radius: 50%;
+  border: 10px solid #814949;
+
+  font-size: 2em;
+
+  text-align: center;
+  background: rgba(240, 234, 203, 0.8);
+
+  opacity: 0;
+  transition: all .2s linear;
+  transform: scale(.5);
+}
+
+#main figure:hover img {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+#main figure:hover figcaption {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#main figure figcaption span {
+  position: absolute;
+  top: calc(50% - 2em);
+  left: 0;
+  right: 0;
+}
