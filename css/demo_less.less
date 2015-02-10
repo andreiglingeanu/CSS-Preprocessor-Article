@@ -1,0 +1,55 @@
+#main {
+    figure {
+        position: relative;
+
+        img {
+            width: 100%;
+            transition: all .2s linear;
+        }
+
+        &,
+        img {
+            border-radius: 50%;
+        }
+
+        figcaption {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            right: 15px;
+            bottom: 0;
+
+            padding-top: 20px;
+            border-radius: 50%;
+            border: 10px solid #814949;
+
+            font-size: 2em;
+
+            text-align: center;
+            background: rgba(240, 234, 203, 0.8);
+
+            opacity: 0;
+            transition: all .2s linear;
+            transform: scale(.5);
+
+            span {
+                position: absolute;
+                top: calc(50% - 2em);
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &:hover {
+            img {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+
+            figcaption {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+}
