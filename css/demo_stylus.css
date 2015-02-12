@@ -6,7 +6,8 @@
   transition: all 0.2s linear;
 }
 #main figure,
-#main figure img {
+#main figure img,
+#main figure figcaption {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -18,9 +19,6 @@
   right: 15px;
   bottom: 0;
   padding-top: 20px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
   border: 10px solid #814949;
   font-size: 2em;
   text-align: center;

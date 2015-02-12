@@ -1,3 +1,8 @@
+.make-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
 #main figure {
   position: relative;
 }
@@ -6,7 +11,10 @@
   transition: all .2s linear;
 }
 #main figure,
+#main figure figcaption,
 #main figure img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 #main figure figcaption {
@@ -16,7 +24,6 @@
   right: 15px;
   bottom: 0;
   padding-top: 20px;
-  border-radius: 50%;
   border: 10px solid #814949;
   font-size: 2em;
   text-align: center;

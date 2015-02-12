@@ -1,3 +1,16 @@
+@circleBackground: rgba(240, 234, 203, 0.8);
+@circleBorder:     #814949;
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.make-circle {
+    .border-radius(50%);
+}
+
 #main {
     figure {
         position: relative;
@@ -8,8 +21,9 @@
         }
 
         &,
+        figcaption,
         img {
-            border-radius: 50%;
+            .make-circle();
         }
 
         figcaption {
@@ -20,13 +34,12 @@
             bottom: 0;
 
             padding-top: 20px;
-            border-radius: 50%;
-            border: 10px solid #814949;
+            border: 10px solid @circleBorder;
 
             font-size: 2em;
 
             text-align: center;
-            background: rgba(240, 234, 203, 0.8);
+            background: @circleBackground;
 
             opacity: 0;
             transition: all .2s linear;
