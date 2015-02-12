@@ -1,0 +1,68 @@
+$circleBackground: rgba(240, 234, 203, 0.8);
+$circleBorder: #814949;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.make-circle {
+  @include border-radius(50%);
+}
+
+#main {
+  figure {
+    position: relative;
+
+    img {
+      width: 100%;
+      transition: all .2s linear;
+    }
+
+    &,
+    figcaption,
+    img {
+      @extend .make-circle;
+    }
+
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      right: 15px;
+      bottom: 0;
+
+      padding-top: 20px;
+      border: 10px solid $circleBorder;
+
+      font-size: 2em;
+
+      text-align: center;
+      background: $circleBackground;
+
+      opacity: 0;
+      transition: all .2s linear;
+      transform: scale(.5);
+
+      span {
+        position: absolute;
+        top: calc(50% - 2em);
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+
+      figcaption {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
